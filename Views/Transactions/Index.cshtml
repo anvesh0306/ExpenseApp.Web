@@ -1,0 +1,49 @@
+@model IEnumerable<ExpenseApp.Web.Models.Transaction>
+
+@{
+    ViewData["Title"] = "Transactions";
+}
+
+<h2>Transactions</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">
+        Create New Transaction
+    </a>
+</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Amount</th>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var transaction in Model)
+        {
+            <tr>
+                <td>@transaction.Id</td>
+                <td>@transaction.Amount</td>
+                <td>@transaction.Description</td>
+                <td>@transaction.Category</td>
+                <td>
+                    <a asp-action="Edit"
+                       asp-route-id="@transaction.Id"
+                       class="btn btn-warning btn-sm">
+                        Edit
+                    </a>
+
+                    <a asp-action="Delete"
+                       asp-route-id="@transaction.Id"
+                       class="btn btn-danger btn-sm">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

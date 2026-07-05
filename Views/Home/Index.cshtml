@@ -1,0 +1,149 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container">
+
+    <!-- Hero Section -->
+    <div class="p-5 mb-5 bg-primary text-white rounded-4 shadow">
+        <div class="container-fluid">
+
+            <h1 class="display-4 fw-bold">💰 Expense Manager</h1>
+
+            <p class="lead mt-3">
+                Easily record, organize and manage your daily expenses.
+                Keep all your transactions in one place.
+            </p>
+
+            <a asp-controller="Transactions"
+               asp-action="Index"
+               class="btn btn-warning btn-lg fw-bold mt-3">
+                Manage Transactions
+            </a>
+
+        </div>
+    </div>
+
+    <!-- Features -->
+    <div class="row g-4">
+
+        <div class="col-md-3">
+            <div class="card shadow border-0 h-100 bg-primary text-white">
+                <div class="card-body text-center">
+                    <h1>📝</h1>
+                    <h4>Record Expenses</h4>
+                    <p>
+                        Add new expenses with amount,
+                        description and category.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow border-0 h-100 bg-success text-white">
+                <div class="card-body text-center">
+                    <h1>💰</h1>
+                    <h4>Track Spending</h4>
+                    <p>
+                        Keep a complete history
+                        of all your expenses.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow border-0 h-100 bg-warning">
+                <div class="card-body text-center">
+                    <h1>📂</h1>
+                    <h4>Categories</h4>
+                    <p>
+                        Organize expenses into
+                        Food, Travel, Shopping and more.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="card shadow border-0 h-100 bg-danger text-white">
+                <div class="card-body text-center">
+                    <h1>📈</h1>
+                    <h4>Reports</h4>
+                    <p>
+                        Review and manage
+                        your expense records.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Information -->
+    <div class="row mt-5">
+
+        <div class="col-md-7">
+
+            <div class="card shadow">
+
+                <div class="card-header bg-info text-white">
+                    <h4>Application Features</h4>
+                </div>
+
+                <div class="card-body">
+
+                    <ul class="list-group list-group-flush">
+
+                        <li class="list-group-item">✔ Add new expense transactions</li>
+
+                        <li class="list-group-item">✔ Edit existing transactions</li>
+
+                        <li class="list-group-item">✔ Delete unwanted records</li>
+
+                        <li class="list-group-item">✔ Organize expenses by category</li>
+
+                        <li class="list-group-item">✔ Maintain a complete expense history</li>
+
+                        <li class="list-group-item">✔ Simple, clean and user-friendly interface</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-md-5">
+
+            <div class="card shadow">
+
+                <div class="card-header bg-dark text-white">
+                    <h4>Quick Actions</h4>
+                </div>
+
+                <div class="card-body d-grid gap-3">
+
+                    <a asp-controller="Transactions"
+                       asp-action="Index"
+                       class="btn btn-primary">
+                        📋 View Transactions
+                    </a>
+
+                    <a asp-controller="Transactions"
+                       asp-action="Create"
+                       class="btn btn-success">
+                        ➕ Add New Expense
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
